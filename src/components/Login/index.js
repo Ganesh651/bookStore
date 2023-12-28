@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Cookies from 'js-cookie'
-import ThreeDots from 'react-loader-spinner'
+import { ThreeDots } from 'react-loader-spinner'
 import './index.css'
 
 const Login = () => {
