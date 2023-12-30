@@ -1,0 +1,13 @@
+.footer {
+  padding: 50px 100px;
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
+  margin: auto;
+}
+
+.social-icons-containeter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

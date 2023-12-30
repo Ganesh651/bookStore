@@ -1,0 +1,75 @@
+.book-info-container {
+  display: flex;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+.book-cover-image {
+  width: 133px;
+  height: 155px;
+  border-radius: 5px;
+}
+
+.book-info {
+  margin-left: 30px;
+}
+
+.each-book-title {
+  color: #334155;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0 0 3px 0;
+}
+
+.each-book-author {
+  color: #475569;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  margin: 0 0 3px 0;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  width: 120px;
+  justify-content: space-between;
+}
+
+.avg-rating {
+  color: #475569;
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  margin: 0 0 3px 0;
+}
+
+.rating {
+  color: #334155;
+  font-family: "HK Grotesk";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 0 3px 0;
+}
+
+.status {
+  color: #475569;
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  margin: 0 0 3px 0;
+}
+
+.status-span {
+  color: #0284C7;
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}

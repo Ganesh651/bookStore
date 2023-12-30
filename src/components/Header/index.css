@@ -41,6 +41,12 @@
   outline: none;
   border: 0;
   border-radius: 3px;
+  outline: none;
+}
+
+.nav-items-container {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 767px) {

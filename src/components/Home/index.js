@@ -1,6 +1,8 @@
 import Slider from "react-slick";
 import Header from "../Header";
 import Cookies from 'js-cookie'
+import Footer from "../Footer";
+import { useNavigate } from 'react-router-dom'
 import { ThreeDots } from 'react-loader-spinner'
 import useFetch from "../useFetch";
 import './index.css'
@@ -9,6 +11,7 @@ import './index.css'
 
 
 const Home = () => {
+  const navigate = useNavigate()
   const token = Cookies.get("jwt_token")
   const url = `https://apis.ccbp.in/book-hub/top-rated-books`
   const options = {
@@ -21,6 +24,10 @@ const Home = () => {
   const { fetchedData, apiStatus } = topRated
   const { books } = fetchedData
   console.log(books)
+
+  const handdlerBooks = () => {
+    navigate("/shelf")
+  }
 
   const renderLoadingView = () => (
     <div className="loader-container">
@@ -54,7 +61,8 @@ const Home = () => {
             initialSlide: 2,
             dots: true,
             arrows: false,
-            swipeToSlide: true
+            swipeToSlide: true,
+            swipe: true
           }
         },
         {
@@ -65,7 +73,8 @@ const Home = () => {
             dots: true,
             arrows: false,
             className: "inner-div",
-            swipeToSlide: true
+            swipeToSlide: true,
+            swipe: true
           }
         }
       ]
@@ -125,13 +134,14 @@ const Home = () => {
         <div className="top-rated-books-container">
           <div className="top-rated-books-heading-container">
             <h2 className="top-rating-heading">Top Rated Books</h2>
-            <button type="button" className="find-books-button">
+            <button type="button" className="find-books-button" onClick={handdlerBooks}>
               Find Books
             </button>
           </div>
           {renderTopRatedBooks()}
         </div>
       </div>
+      <Footer />
     </>
   )
 }

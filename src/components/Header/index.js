@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate, Link } from 'react-router-dom'
 import Cookies from 'js-cookie'
 import Hamburger from '../Hamburger'
 import './index.css'
@@ -16,10 +16,12 @@ const Header = () => {
 
   return (
     <nav className='navbar'>
-      <img src="https://res.cloudinary.com/dovk61e0h/image/upload/v1662988538/Bookhub/bookhub_logo_hjkrwl.png"
-        alt="book store"
-        className='website-logo'
-      />
+      <Link to="/">
+        <img src="https://res.cloudinary.com/dovk61e0h/image/upload/v1662988538/Bookhub/bookhub_logo_hjkrwl.png"
+          alt="book store"
+          className='website-logo'
+        />
+      </Link>
       <div className='nav-items-container'>
         <span style={{ marginRight: "10px" }}>
           <NavLink to="/" className={className}>
