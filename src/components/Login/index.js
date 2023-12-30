@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Cookies from 'js-cookie'
 import { ThreeDots } from 'react-loader-spinner'
 import './index.css'
@@ -9,16 +10,23 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [showErrorMessage, setShowErrorMessage] = useState(false)
   const [errorMessage, setErrorMessage] = useState("")
+  const navigate = useNavigate()
+  console.log(isLoading)
+
+  const renderLoginSuccessView = jwtToken => {
+    Cookies.set("jwt_token", jwtToken, { expires: 30 })
+    navigate("/")
+  }
+
+  const renderLoginFailureView = errorMsg => {
+    setErrorMessage(errorMsg)
+  }
 
 
-  const renderLoginSuccessView = jwtToken => { }
-
-  const renderLoginFailureView = errorMsg => { }
-
-
-  const handdleLogin = async (e) => {
+  const handdleLogin = async e => {
     e.preventDefault()
     const userDetails = { username, password }
+    // console.log(userDetails)
     const url = 'https://apis.ccbp.in/login'
     const options = {
       method: "POST",
@@ -27,6 +35,7 @@ const Login = () => {
     setIsLoading(true)
     const response = await fetch(url, options)
     const data = await response.json()
+    console.log(data)
 
     if (response.ok === true) {
       setIsLoading(false)
@@ -34,9 +43,8 @@ const Login = () => {
     } else {
       setIsLoading(false)
       renderLoginFailureView(data.error_msg)
+      setShowErrorMessage(true)
     }
-
-
   }
 
   const onChangeUsername = (e) => {
@@ -44,7 +52,7 @@ const Login = () => {
   }
 
   const onChangePassword = (e) => {
-    setUsername(e.target.value)
+    setPassword(e.target.value)
   }
 
   return (
@@ -84,11 +92,11 @@ const Login = () => {
               onChange={onChangePassword}
               value={password}
             />
-            <span className='error-message'>{errorMessage}</span>
+            {showErrorMessage && <span className='error-message'>{errorMessage}</span>}
           </div>
-          <div className='login-button-container'>
-            {isLoading ? <ThreeDots /> : "Login"}
-          </div>
+          <button className='login-button-container' type="submit">
+            {isLoading ? <ThreeDots color='#fff' height={30} width={30} /> : "Login"}
+          </button>
         </form>
       </div>
     </div>

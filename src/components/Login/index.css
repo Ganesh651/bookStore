@@ -57,6 +57,10 @@
   border: 0;
   outline: none;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .login-image-mobile {

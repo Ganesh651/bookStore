@@ -5,6 +5,7 @@ import BookDetails from './components/BookDetails';
 import Home from './components/Home';
 import Bookshelves from './components/BookShelves';
 import Notfound from './components/Notfound';
+import Wrapper from './components/Wrapper';
 import './App.css'
 
 
@@ -12,9 +13,21 @@ const App = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/login" element={<Login />} />
-      <Route path="/" element={<Home />} />
-      <Route path="/shelf" element={<Bookshelves />} />
-      <Route path='/book/:id' element={<BookDetails />} />
+      <Route path="/" element={
+        <Wrapper>
+          <Home />
+        </Wrapper>
+      } />
+      <Route path="/shelf" element={
+        <Wrapper>
+          <Bookshelves />
+        </Wrapper>
+      } />
+      <Route path='/book/:id' element={
+        <Wrapper>
+          <BookDetails />
+        </Wrapper>
+      } />
       <Route path='*' element={<Notfound />} />
     </Routes>
   </BrowserRouter>
