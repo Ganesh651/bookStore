@@ -78,4 +78,9 @@
   .book-info {
     margin-left: 15px;
   }
+
+  .book-info-container {
+    width: 100%;
+    max-width: 240px;
+  }
 }

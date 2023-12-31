@@ -56,6 +56,18 @@
   min-height: 75vh;
 }
 
+.sidebar-container-mobile {
+  display: none;
+}
+
+.search-container-mobile {
+  display: none;
+}
+
+.mobile-container {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   .books-shelf-container {
     padding: 10px;
@@ -73,5 +85,39 @@
 
   .books-list-header {
     flex-direction: column;
+  }
+
+  .sidebar-container-mobile {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-container-mobile h2 {
+    color: #334155;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .books-list-header h3 {
+    display: none;
+  }
+
+  .search-container {
+    display: none;
+  }
+
+  .search-container-mobile {
+    display: block;
+    border: 1px solid #94A3B8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-container {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

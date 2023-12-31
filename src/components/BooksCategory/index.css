@@ -23,3 +23,43 @@
   display: block;
   cursor: pointer;
 }
+
+.active-mobile {
+  display: none;
+}
+
+.pending-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .active-mobile {
+    display: block;
+    margin: 0 10px 10px 0;
+    color: #fff;
+    border: 1px solid #0284C7;
+    height: 30px;
+    width: auto;
+    border-radius: 25px;
+    background-color: #0284C7;
+  }
+
+  .pending-mobile {
+    display: block;
+    margin: 0 10px 10px 0;
+    color: #0284C7;
+    border: 1px solid #0284C7;
+    height: 30px;
+    width: auto;
+    border-radius: 25px;
+    background-color: transparent;
+  }
+
+  .active {
+    display: none;
+  }
+
+  .pending {
+    display: none;
+  }
+}

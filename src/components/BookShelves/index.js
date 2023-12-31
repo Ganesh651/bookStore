@@ -79,7 +79,7 @@ const BookShelves = () => {
 
   useEffect(() => {
     getData()
-  }, [url, activeTab])
+  }, [activeTab])
 
   const searchHanddler = (e) => {
     setSearchInput(e.target.value)
@@ -92,19 +92,45 @@ const BookShelves = () => {
   }
 
   const renderSidebar = () => (
-    <div className='sidebar-container'>
-      <h2>Bookshelves</h2>
-      <div>
-        {bookshelvesList.map(shelf => (
-          <BooksCategory
-            shelf={shelf}
-            key={shelf.id}
-            isActive={shelf.id === activeId}
-            changeActiveTab={changeActiveTab}
-          />
-        ))}
+    <>
+      <div className='sidebar-container'>
+        <h2>Bookshelves</h2>
+        <div>
+          {bookshelvesList.map(shelf => (
+            <BooksCategory
+              shelf={shelf}
+              key={shelf.id}
+              isActive={shelf.id === activeId}
+              changeActiveTab={changeActiveTab}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+      <div className='search-container-mobile'>
+        <input type='search'
+          className='search-input'
+          placeholder='Search'
+          onChange={searchHanddler}
+          value={searchInput}
+        />
+        <div className='search-icon-container' onClick={handdlerSearch}>
+          <CiSearch />
+        </div>
+      </div>
+      <div className='sidebar-container-mobile'>
+        <h2>Bookshelves</h2>
+        <div className='mobile-container'>
+          {bookshelvesList.map(shelf => (
+            <BooksCategory
+              shelf={shelf}
+              key={shelf.id}
+              isActive={shelf.id === activeId}
+              changeActiveTab={changeActiveTab}
+            />
+          ))}
+        </div>
+      </div>
+    </>
   )
 
   const renderLoaderView = () => (

@@ -64,7 +64,7 @@ const BookDetails = () => {
         <div className='specific-book-info-container'>
           <h3 className='each-book-title'>{specificBookData.book_details.title}</h3>
           <p className='each-book-author'>{specificBookData.book_details.author_name}</p>
-          <div className='rating-container'>
+          <div className='rating-container-book-details'>
             <p className='avg-rating'>Avg Rating </p>
             <FaStar style={{ color: "#FBBF24" }} />
             <p className='rating'>

@@ -7,11 +7,13 @@ import { ThreeDots } from 'react-loader-spinner'
 import useFetch from "../useFetch";
 import FailureView from "../FailureView";
 import './index.css'
-
+// import { useState } from "react";
+// import { Input, Button, Typography } from '@mui/material'
 
 
 
 const Home = () => {
+  // const [blogImage, setBlogImage] = useState("")
   const navigate = useNavigate()
   const token = Cookies.get("jwt_token")
   const url = `https://apis.ccbp.in/book-hub/top-rated-books`
@@ -118,6 +120,26 @@ const Home = () => {
     }
   }
 
+  // const handleFileUpload = async (e) => {
+  //   console.log(e.target.files[1]);
+  //   const file = e.target.files[0];
+  //   const base64 = await convertToBase64(file);
+  //   setBlogImage(base64);
+  // };
+
+  // function convertToBase64(file) {
+  //   return new Promise((resolve, reject) => {
+  //     const fileReader = new FileReader();
+  //     fileReader.readAsDataURL(file);
+  //     fileReader.onload = () => {
+  //       resolve(fileReader.result);
+  //     };
+  //     fileReader.onerror = (error) => {
+  //       reject(error);
+  //     }
+  //   })
+  // }
+
   return (
     <>
       <Header />
@@ -129,6 +151,7 @@ const Home = () => {
             and we will give you surprisingly insightful
             recommendations.
           </p>
+          {/* <img style={{ height: "150px", width: "150px" }} src={blogImage} alt="icon" /> */}
           <button type="button" className="find-books-button-mobile" onClick={handdlerBooks}>
             Find Books
           </button>
@@ -139,6 +162,31 @@ const Home = () => {
             <button type="button" className="find-books-button" onClick={handdlerBooks}>
               Find Books
             </button>
+            {/* <Input
+              accept="image/*"
+              multiple
+              type="file"
+              onChange={handleFileUpload}
+              // value={blogImage}
+              id="imageFile"
+              sx={{ display: "none" }}
+            />
+            <Button
+              sx={{
+                // width: "200px",
+                color: "black",
+                height: "45px",
+                background: "#f7f8ff",
+                borderRadius: "8px",
+                borderWidth: "dotted",
+              }}
+              onClick={handleFileUpload}
+              component={"label"}
+              htmlFor={"imageFile"}
+              variant="outlined"
+            >
+              <Typography variant="body"> Upload Image </Typography>
+            </Button> */}
           </div>
           {renderTopRatedBooks()}
         </div>
