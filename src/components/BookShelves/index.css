@@ -55,3 +55,23 @@
   justify-content: space-between;
   min-height: 75vh;
 }
+
+@media screen and (max-width: 767px) {
+  .books-shelf-container {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .sidebar-container {
+    display: none;
+  }
+
+  .books-list-container {
+    padding: 0;
+    width: 100%;
+  }
+
+  .books-list-header {
+    flex-direction: column;
+  }
+}

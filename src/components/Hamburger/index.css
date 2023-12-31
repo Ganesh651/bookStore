@@ -44,4 +44,12 @@
     width: 20px;
     cursor: pointer;
   }
+
+  .nav-item {
+    font-size: 12px;
+  }
+
+  .logout-button {
+    font-size: 12px;
+  }
 }

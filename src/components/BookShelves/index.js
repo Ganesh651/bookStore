@@ -79,7 +79,7 @@ const BookShelves = () => {
 
   useEffect(() => {
     getData()
-  }, [activeTab])
+  }, [url, activeTab])
 
   const searchHanddler = (e) => {
     setSearchInput(e.target.value)
