@@ -9,6 +9,7 @@ import Cookies from 'js-cookie'
 import { ThreeDots } from 'react-loader-spinner'
 import Footer from '../Footer';
 import BooksList from '../BooksList';
+import FailureView from '../FailureView';
 
 const bookshelvesList = [
   {
@@ -73,6 +74,7 @@ const BookShelves = () => {
 
   const handdlerSearch = () => {
     getData()
+    setSearchInput("")
   }
 
   useEffect(() => {
@@ -119,7 +121,7 @@ const BookShelves = () => {
     </div>
   )
 
-  const renderFailureView = () => { }
+  const renderFailureView = () => <FailureView getData={getData} />
 
   const renderBooksView = () => {
     switch (apiStatus) {

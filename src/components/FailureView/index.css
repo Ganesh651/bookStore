@@ -1,0 +1,27 @@
+.failure-view-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.failure-container {
+  text-align: center;
+}
+
+.failure-description {
+  color: #475569;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.try-again-button {
+  background-color: #0284C7;
+  color: #fff;
+  width: 112px;
+  height: 48px;
+  border-radius: 6px;
+  outline: none;
+  border: 0;
+}

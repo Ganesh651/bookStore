@@ -5,6 +5,7 @@ import Footer from "../Footer";
 import { useNavigate } from 'react-router-dom'
 import { ThreeDots } from 'react-loader-spinner'
 import useFetch from "../useFetch";
+import FailureView from "../FailureView";
 import './index.css'
 
 
@@ -23,7 +24,6 @@ const Home = () => {
   const topRated = useFetch(url, options)
   const { fetchedData, apiStatus } = topRated
   const { books } = fetchedData
-  console.log(books)
 
   const handdlerBooks = () => {
     navigate("/shelf")
@@ -99,7 +99,9 @@ const Home = () => {
     )
   }
 
-  const renderFailureView = () => { }
+  const retry = () => { }
+
+  const renderFailureView = () => <FailureView retry={retry} />
 
 
 
@@ -127,7 +129,7 @@ const Home = () => {
             and we will give you surprisingly insightful
             recommendations.
           </p>
-          <button type="button" className="find-books-button-mobile">
+          <button type="button" className="find-books-button-mobile" onClick={handdlerBooks}>
             Find Books
           </button>
         </div>

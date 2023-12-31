@@ -1,0 +1,43 @@
+.notfound-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+
+.notfound-container {
+  text-align: center;
+  width: 550px;
+}
+
+.notfound-image {
+  width: 348px;
+  height: 200px
+}
+
+.notfound-heading {
+  color: #334155;
+  font-family: "Inter";
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+}
+
+.notfound-description {
+  color: #475569;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.back-home-button {
+  background-color: #0284C7;
+  color: #fff;
+  width: 164px;
+  height: 48px;
+  border-radius: 6px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}

@@ -1,7 +1,7 @@
 .books-shelf-container {
   padding: 30px 100px 0 100px;
   display: flex;
-  background-color: #E4E7EB;
+  background-color: #F8FAFC;
   min-height: 100vh;
 }
 
@@ -53,4 +53,5 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  min-height: 75vh;
 }

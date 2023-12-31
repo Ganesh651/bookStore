@@ -30,7 +30,7 @@
 }
 
 .top-rated-books-container {
-  background-color: #bfbfbf;
+  background-color: #e6e5e5;
   box-shadow: 0px 4px 16px 0px #fff;
   padding: 20px 40px;
   border-radius: 5px;
@@ -212,6 +212,7 @@
 
 .loader-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 }

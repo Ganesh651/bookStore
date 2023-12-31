@@ -1,0 +1,31 @@
+.specific-book-details-container {
+  padding: 30px 120px 0 120px;
+  background-color: #F8FAFC;
+  min-height: 100vh;
+}
+
+.specific-details-container {
+  background-color: #fff;
+  box-shadow: 0px 4px 16px 0px #8a8989;
+  padding: 30px;
+  border-radius: 10px;
+  min-height: 75vh;
+}
+
+.specific-book-image {
+  width: 135px;
+  height: 174px;
+  border-radius: 14px;
+}
+
+.specific-book {}
+
+.specific-book-top-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.specific-book-info-container {
+  margin-left: 30px;
+}
