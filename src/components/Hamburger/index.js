@@ -10,7 +10,7 @@ const Hamburger = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
-  const className = (props) => props.isActive ? "active" : "pending"
+  const className = (props) => props.isActive ? "active-mobile-nav" : "pending-mobile-nav"
 
   const handleMenu = () => {
     setOpen(!open);

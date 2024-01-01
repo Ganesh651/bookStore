@@ -6,6 +6,14 @@
   display: none;
 }
 
+.pending-mobile-nav {
+  display: none;
+}
+
+.active-mobile-nav {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   .hamburger-menu {
     display: block;
@@ -30,7 +38,7 @@
 
   .popup-content {
     margin: auto 0;
-    background: rgb(157, 156, 156);
+    background: rgb(167, 166, 166);
     width: 90%;
     padding: 5px;
     display: flex;
@@ -51,5 +59,25 @@
 
   .logout-button {
     font-size: 12px;
+  }
+
+  .pending-mobile-nav {
+    color: #64748B;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .active-mobile-nav {
+    color: #0284C7;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none;
+    display: block;
   }
 }
