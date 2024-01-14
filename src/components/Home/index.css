@@ -150,6 +150,7 @@
 
   .home-container {
     padding: 0;
+    height: 100vh;
   }
 
   .home-heading-container {
