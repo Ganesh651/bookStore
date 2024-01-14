@@ -1,6 +1,6 @@
 .book-info-container {
   display: flex;
-  margin-bottom: 20px;
+  gap: 20px;
   width: 400px;
 }
 
@@ -8,10 +8,6 @@
   width: 133px;
   height: 155px;
   border-radius: 5px;
-}
-
-.book-info {
-  margin-left: 30px;
 }
 
 .each-book-title {
@@ -75,9 +71,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  .book-info {
-    margin-left: 15px;
-  }
 
   .book-info-container {
     width: 100%;

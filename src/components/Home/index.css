@@ -2,6 +2,7 @@
   background-color: #F8FAFC;
   min-height: 100vh;
   padding: 10px 100px;
+  z-index: 0;
 }
 
 .home-heading-container {
@@ -175,6 +176,7 @@
 
   .slick-image-container {
     width: 150px;
+    height: 100px;
     text-align: center;
   }
 

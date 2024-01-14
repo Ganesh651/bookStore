@@ -44,7 +44,6 @@ const Home = () => {
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 2,
-      adaptiveHeight: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -52,7 +51,6 @@ const Home = () => {
             slidesToShow: 3,
             slidesToScroll: 2,
             infinite: true,
-            dots: true
           }
         },
         {
@@ -72,9 +70,7 @@ const Home = () => {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-            dots: true,
             arrows: false,
-            className: "inner-div",
             swipeToSlide: true,
             swipe: true
           }
@@ -89,7 +85,7 @@ const Home = () => {
             <Slider {...settings}>
               {books.map(offer => (
                 <div key={offer.id} className="slick-image-container">
-                  <img className='slide-image' src={offer.cover_pic} alt={offer.title} />
+                  <img className='slide-image' style={{ display: "inline" }} src={offer.cover_pic} alt={offer.title} />
                   <span className="title">{offer.title}</span>
                   <span className="author-name">{offer.author_name}</span>
                 </div>

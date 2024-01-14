@@ -2,8 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
   box-shadow: 0px 4px 16px 0px #bfbfbf;
   padding: 10px 100px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
 }
 
 .website-logo {
