@@ -70,7 +70,7 @@
 @media screen and (max-width: 767px) {
   .books-shelf-container {
     padding: 10px;
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .sidebar-container {
@@ -82,12 +82,17 @@
     width: 100%;
   }
 
+  .list-container {
+    grid-template-columns: 1fr;
+  }
+
   .books-list-header {
     flex-direction: column;
   }
 
   .sidebar-container-mobile {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
     margin-bottom: 20px;
   }
 
@@ -108,11 +113,10 @@
   }
 
   .search-container-mobile {
-    display: block;
     border: 1px solid #94A3B8;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 0.5fr;
+    width: fit-content;
   }
 
   .mobile-container {

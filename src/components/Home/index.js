@@ -59,10 +59,9 @@ const Home = () => {
             slidesToShow: 2,
             slidesToScroll: 2,
             initialSlide: 2,
-            dots: true,
             arrows: false,
             swipeToSlide: true,
-            swipe: true
+            // swipe: true
           }
         },
         {
@@ -72,7 +71,7 @@ const Home = () => {
             slidesToScroll: 2,
             arrows: false,
             swipeToSlide: true,
-            swipe: true
+            // swipe: true
           }
         }
       ]
