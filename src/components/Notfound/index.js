@@ -9,7 +9,6 @@ const Notfound = () => {
     navigate("/")
   }
 
-
   return (
     <div className='notfound-section'>
       <div className='notfound-container'>
